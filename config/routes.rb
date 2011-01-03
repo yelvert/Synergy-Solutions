@@ -1,7 +1,5 @@
 SynergySolutions::Application.routes.draw do
-  resources :page_texts
-
-  get "about_us", :to => "about_us#index"
+  get "about", :to => "about#index"
 
   get "administration", :to => "administration#index"
 

@@ -1,3 +1,3 @@
 require 'spec_helper'
-describe AboutUsHelper do
+describe AboutHelper do
 end
