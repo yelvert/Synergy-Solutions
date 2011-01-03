@@ -8,8 +8,11 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <%= link_to "Login", login_path %>
+  <%= link_to "Logout", logout_path %>
   <h1>Synergy Solutions of Alabama</h1>
+  <ul>
+    <li><%= link_to "Admins", admins_path %></li>
+  </ul>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <%= yield %>

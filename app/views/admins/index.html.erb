@@ -1,10 +1,9 @@
-<h1>Listing admins</h1>
+<h1>Listing Admins</h1>
 
 <table>
   <tr>
     <th>Name</th>
     <th>Email</th>
-    <th></th>
     <th></th>
     <th></th>
   </tr>
@@ -13,7 +12,6 @@
   <tr>
     <td><%= admin.name %></td>
     <td><%= admin.email %></td>
-    <td><%= link_to 'Show', admin %></td>
     <td><%= link_to 'Edit', edit_admin_path(admin) %></td>
     <td><%= link_to 'Destroy', admin, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
