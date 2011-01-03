@@ -4,7 +4,7 @@ gem 'rails', '3.0.1'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
-gem 'devise', :git => 'http://github.com/plataformatec/devise.git'
+gem 'devise', '>= 1.2.rc'
 gem 'syntax'
 
 group :development, :test do
