@@ -70,5 +70,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  rails
+  rails (= 3.0.1)
   sqlite3-ruby
