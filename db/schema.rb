@@ -10,12 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110103171957) do
+ActiveRecord::Schema.define(:version => 20110103182628) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                             :default => "", :null => false
     t.string   "encrypted_password", :limit => 128, :default => "", :null => false
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "page_texts", :force => true do |t|
+    t.string   "name"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

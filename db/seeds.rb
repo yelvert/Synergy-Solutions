@@ -1,0 +1,1 @@
+PageText.create(:name => "AboutUs", :content => "This is the content for about us.")
