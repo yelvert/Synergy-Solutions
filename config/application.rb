@@ -41,7 +41,14 @@ module SynergySolutions
       "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/themes/cupertino/jquery-ui.css",
       "main"
     ]
-
+    
+    config.generators do |g|
+      g.orm                 :active_record
+      g.template_engine     :erb
+      g.test_framework      :rspec, :fixture => true, :views => false, :view_specs => false, :controller_specs => false, :routing_specs => false
+      g.fixture_replacement :fabrication, :dir => "spec/fabricators"
+    end
+    
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
