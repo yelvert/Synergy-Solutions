@@ -1,3 +1,3 @@
 require 'spec_helper'
-describe PageHelper do
+describe PagesHelper do
 end
