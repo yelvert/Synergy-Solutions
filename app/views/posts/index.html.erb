@@ -1,0 +1,19 @@
+<h1>Listing Posts</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Poster</th>
+    <th></th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.title %></td>
+    <td><%= post.content %></td>
+    <td><%= post.poster.name %></td>
+    <td><%= link_to 'Show', post_path(post.blog_id) %></td>
+  </tr>
+<% end %>
+</table>

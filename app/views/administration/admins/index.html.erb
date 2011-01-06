@@ -1,0 +1,23 @@
+<h1>Listing Admins</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admins.each do |admin| %>
+  <tr>
+    <td><%= admin.name %></td>
+    <td><%= admin.email %></td>
+    <td><%= link_to 'Edit', edit_administration_admin_path(admin) %></td>
+    <td><%= link_to 'Destroy', administration_admin_path(admin), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Admin', new_administration_admin_path %>

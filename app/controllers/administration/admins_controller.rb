@@ -1,4 +1,4 @@
-class AdminsController < ApplicationController
+class Administration::AdminsController < ApplicationController
   before_filter :authenticate_admin!
   layout 'administration'
   # GET /admins
@@ -46,7 +46,7 @@ class AdminsController < ApplicationController
 
     respond_to do |format|
       if @admin.save
-        format.html { redirect_to(admins_url, :notice => 'Admin was successfully created.') }
+        format.html { redirect_to(administration_admins_url, :notice => 'Admin was successfully created.') }
         format.xml  { render :xml => @admin, :status => :created, :location => @admin }
       else
         format.html { render :action => "new" }
@@ -62,7 +62,7 @@ class AdminsController < ApplicationController
 
     respond_to do |format|
       if @admin.update_attributes(params[:admin])
-        format.html { redirect_to(admins_url, :notice => 'Admin was successfully updated.') }
+        format.html { redirect_to(administration_admins_url, :notice => 'Admin was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -78,7 +78,7 @@ class AdminsController < ApplicationController
     @admin.destroy
 
     respond_to do |format|
-      format.html { redirect_to(admins_url) }
+      format.html { redirect_to(administration_admins_url) }
       format.xml  { head :ok }
     end
   end
